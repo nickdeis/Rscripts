@@ -29,13 +29,13 @@ easycode <- function(X,data_column,coding_column,auto_fill){
 			X[,coding_column]=as.Date(X[,coding_column],format(date_format))
 			}
 		
-		change=readline("Change coding column? Y for yes, N for no ") 
-			if(change == "Y"){
-				coding_column=readline("What is the name of the column you would like to code in now? ")
+		change=readline("Change coding column? type in the column name or N for no ") 
+			if(change != "N"){
+				coding_column=change
 			}
-		change_data=readline("Change data column to be read? Y for yes, N for no ")
-			if(change_data == "Y"){
-				data_column=readline("What is the name of the data column you would like to be read off now? ")
+		change_data=readline("Change data column to be read? type in the column name or N for no ")
+			if(change_data != "N"){
+				data_column=change_data
 			}
 		if((change == "N") & (change_data == "N")){
 			keep_going=FALSE

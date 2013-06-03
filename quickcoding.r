@@ -19,7 +19,9 @@ easycode <- function(X,data_column,coding_column,auto_fill){
 		}
 		
 		#Section where I ask things to be parsed#
-		parser=readline("Is there a specific format you would like the data you just coded to be in? type int for integers or dates for calendar dates written in integer form. If not, just press enter")
+		parser=readline("Is there a specific format you would like the data 
+		you just coded to be in? type int for integers or dates for calendar 
+		dates written in integer form. If not, just press enter")
 		#if yes#
 		if(parser == "int"){
 			X[,coding_column]=as.integer(X[,coding_column])
